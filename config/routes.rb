@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root 'forms#index', as: 'home'
-  resources :forms
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    root 'forms#index', as: 'home'
+    resources :forms
+  end
 end

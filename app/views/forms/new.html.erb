@@ -1,4 +1,4 @@
-<h2>Add new form</h2>
+<h2><%= t('headers.Add_form') %></h2>
 <%= form_for :form, url: forms_path do |f| %>
   <% if @form.errors.any? %>
     <% @form.errors.full_messages.each do |e| %>
@@ -9,23 +9,23 @@
   <% end %>
 
   <p>
-   Surname<br>
+    <%= t('activerecord.attributes.form.surname') %><br>
    <%= f.text_field(:surname, {:class => 'form-control'}) %>
   </p>
   <p>
-    School Num.<br>
+    <%= t('activerecord.attributes.form.school') %><br>
     <%= f.number_field(:school, {:class => 'form-control'}) %>
   </p>
   <p>
-    Grade<br>
+    <%= t('activerecord.attributes.form.grade') %><br>
     <%= f.number_field(:grade, {:class => 'form-control'}) %>
   </p>
   <p>
-    Place<br>
+    <%= t('activerecord.attributes.form.place') %><br>
     <%= f.number_field(:place, {:class => 'form-control'}) %>
   </p>
 
   <p>
-    <%= f.submit({:class => 'btn btn-success'}) %>
+    <%= f.submit(t('buttons.Save_form'), {:class => 'btn btn-success'}) %>
   </p>
 <% end %>

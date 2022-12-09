@@ -1,0 +1,24 @@
+uk:
+  activerecord:
+    models:
+      form: "Форма"
+    attributes:
+      form:
+        surname: "Прізвище"
+        school: "Номер школи"
+        grade: "Клас"
+        place: "Місце"
+
+  buttons:
+    Save_form: "Зберегти форму"
+    Edit_form: "Редагувати"
+    Delete_form: "Видалити форму"
+    Read_more: "Читати більше..."
+
+  headers:
+    All_forms: "Всі збережені форми"
+    Add_form: "Додавання нової форми"
+    Edit_form: "Редагування форми"
+  title:
+    Home: "На головну"
+    New_form: "Нова форма"

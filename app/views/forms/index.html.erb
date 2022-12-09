@@ -1,10 +1,10 @@
-<h2 class="mb-4">All stored forms</h2>
+<h2 class="mb-4"><%= t('headers.All_forms') %></h2>
 <% @form.each do |form| %>
   <div class="card card-body alert-light mb-3">
     <h3><%= form.surname %></h3>
-    <p><%= form.school %></p>
-    <p><%= form.grade %></p>
-    <p><%= form.place %></p>
-    <%= link_to "Read more", form_path(form), :class => "btn btn-info" %>
+    <p><%= t('activerecord.attributes.form.school') %>: <b><%= form.school %></b></p>
+    <p><%= t('activerecord.attributes.form.grade') %>: <b><%= form.grade %></b></p>
+    <p><%= t('activerecord.attributes.form.place') %>: <b><%= form.place %></b></p>
+    <%= link_to t('buttons.Read_more'), form_path(form), :class => "btn btn-info" %>
   </div>
 <% end %>

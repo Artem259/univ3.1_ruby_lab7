@@ -1,11 +1,11 @@
 <div class="card card-body alert-light mb-3">
   <h2><%= @form.surname %></h2>
-  <p><%= @form.school %></p>
-  <p><%= @form.grade %></p>
-  <p><%= @form.place %></p>
+  <p><%= t('activerecord.attributes.form.school') %>: <b><%= @form.school %></b></p>
+  <p><%= t('activerecord.attributes.form.grade') %>: <b><%= @form.grade %></b></p>
+  <p><%= t('activerecord.attributes.form.place') %>: <b><%= @form.place %></b></p>
 </div>
 
-<%= link_to "Edit", edit_form_path(@form), :class => "btn btn-warning" %>
-<%= link_to "Delete form", form_path(@form),
+<%= link_to t('buttons.Edit_form'), edit_form_path(@form), :class => "btn btn-warning" %>
+<%= link_to t('buttons.Delete_form'), form_path(@form),
             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
             :class => "btn btn-danger" %>
