@@ -1,0 +1,31 @@
+<h2>Edit form</h2>
+<%= form_for :form, url: form_path(@form), method: :patch do |f| %>
+  <% if @form.errors.any? %>
+    <% @form.errors.full_messages.each do |e| %>
+      <div class="alert alert-danger">
+        <%= e %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <p>
+    Surname<br>
+    <%= f.text_field(:surname, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    School Num.<br>
+    <%= f.number_field(:school, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Grade<br>
+    <%= f.number_field(:grade, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Place<br>
+    <%= f.number_field(:place, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>
